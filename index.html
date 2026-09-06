@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Ukulele Singalong!</title>
+    <style>
+        /* Base Styling & Festive Dark Mode */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0f172a; /* Deep midnight blue */
+            color: #f8fafc; /* Crisp off-white for readability */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header & Charity Banner */
+        header {
+            background-color: #1e293b;
+            text-align: center;
+            padding: 20px 15px;
+            border-bottom: 4px solid #dc2626; /* Festive red border */
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #ef4444; /* Christmas Red */
+        }
+        .subtitle {
+            margin: 5px 0 15px 0;
+            font-size: 1rem;
+            color: #94a3b8;
+        }
+        .charity-box {
+            background-color: #065f46; /* Festive Green */
+            border: 1px solid #10b981;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Quick Navigation Bar (Sticky at top when scrolling) */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #1e293b;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            overflow-x: auto;
+            border-bottom: 1px solid #334155;
+            z-index: 100;
+        }
+        nav a {
+            background-color: #334155;
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background-color: #dc2626;
+        }
+
+        /* Lyrics Layout */
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 15px 80px 15px; /* Extra bottom padding for comfortable scrolling */
+        }
+        .song-section {
+            margin-bottom: 40px;
+            padding-top: 20px; /* Offset for sticky nav */
+        }
+        h2 {
+            color: #f59e0b; /* Warm Amber for Song Titles */
+            border-bottom: 1px solid #334155;
+            padding-bottom: 5px;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        /* The Lyrics: Big and clear for pub reading */
+        .lyrics {
+            font-size: 1.25rem; /* Large font size */
+            white-space: pre-line; /* Preserves line breaks automatically */
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Chorus highlighting to guide the crowd */
+        .chorus {
+            background-color: #1e293b;
+            border-left: 4px solid #f59e0b;
+            padding: 10px 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🎄 Christmas Ukulele Singalong! 🪕</h1>
+        <div class="subtitle">Live at the Pub</div>
+        <div class="charity-box">
+            📣 <strong>Tonight's Charity:</strong> We are raising money for <strong>[Charity Name]</strong>. Please give generously to our bucket collectors or ask us for a digital donation link!
+        </div>
+    </header>
+
+    <!-- Quick Links so patrons don't have to scroll forever -->
+    <nav>
+        <a href="#song1">1. Rockin' Around</a>
+        <a href="#song2">2. Feliz Navidad</a>
+        <a href="#song3">3. Slade</a>
+    </nav>
+
+    <main>
+        <!-- SONG 1 -->
+        <section id="song1" class="song-section">
+            <h2>1. Rockin' Around the Christmas Tree</h2>
+            <div class="lyrics">
+                Rockin' around the Christmas tree
+                At the Christmas party hop
+                Mistletoe hung where you can see
+                Every couple tries to stop
+
+                Rockin' around the Christmas tree
+                Let the Christmas spirit ring
+                Later we'll have some pumpkin pie
+                And we'll do some caroling
+
+                <div class="chorus">
+                You will get a sentimental feeling when you hear
+                Voices singing, let's be jolly
+                Deck the halls with boughs of holly!
+                </div>
+
+                Rockin' around the Christmas tree
+                Have a happy holiday
+                Everyone dancin' merrily
+                In the new old-fashioned way!
+            </div>
+        </section>
+
+        <!-- SONG 2 -->
+        <section id="song2" class="song-section">
+            <h2>2. Feliz Navidad</h2>
+            <div class="lyrics">
+                <div class="chorus">
+                Feliz Navidad
+                Feliz Navidad
+                Feliz Navidad
+                Próspero año y felicidad!
+                </div>
+
+                I wanna wish you a Merry Christmas
+                I wanna wish you a Merry Christmas
+                I wanna wish you a Merry Christmas
+                From the bottom of my heart!
+            </div>
+        </section>
+
+        <!-- SONG 3 -->
+        <section id="song3" class="song-section">
+            <h2>3. Merry Xmas Everybody (Slade)</h2>
+            <div class="lyrics">
+                Are you hanging up a stocking on your wall?
+                It's the time that every Santa has a ball
+                Does he ride a fast decline
+                With the top up down the line
+                With four reindeer de-standing?
+                And a permanent design?
+
+                <div class="chorus">
+                So here it is Merry Christmas
+                Everybody's having fun
+                Look to the future now
+                It's only just begun!
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
