@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vibrant Ukuleles - Christmas Singalong</title>
-    <style>
+       <style>
+        /* 1. IMPORT HOBO FONT AT THE VERY TOP OF STYLE TAG */
+        @import url('https://cdnfonts.com');
+
         /* Base Setup & Festive Crimson/Gold Theme */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
@@ -16,22 +19,45 @@
             text-align: center;
         }
 
-        /* SVG Logo Wrapper - Fixes Mobile Alignment and Squishing */
+        /* 2. UPDATED LOGO CONTAINER - FORCES ABSOLUTE CENTERING */
         .logo-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px 10px;
+            padding: 25px 10px;
             width: 100%;
             box-sizing: border-box;
+            text-align: center;
+        }
+        .logo-container a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 340px; /* Constrains it on small mobile displays */
+            margin: 0 auto;
         }
         .logo-container svg, .logo-container img {
-            max-width: 320px; /* Adjust based on your SVG size */
-            width: 90%;
+            width: 100%;
             height: auto;
             display: block;
             margin: 0 auto;
+            /* Light sky pastel blue halo right behind the text shapes */
             filter: drop-shadow(0px 0px 8px rgba(224, 242, 254, 0.85));
+        }
+
+        /* 3. NEW SVG TEXT TARGETS - FORCES HOBO FONT & CUSTOM LETTER SPACING */
+        svg text {
+            font-family: 'Hobo BT', 'Hobo', 'Arial Black', 'Arial', sans-serif !important;
+            font-weight: 900 !important; /* Forces fallback Arial to render as heavy black/bold */
+            text-anchor: middle !important; /* Mandates absolute horizontal centering */
+            dominant-baseline: middle !important; /* Mandates vertical centering */
+        }
+        svg text .word-vibrant {
+            letter-spacing: 0.18em; /* Adds clean spacing between V, I, B, etc. */
+        }
+        svg text .word-ukuleles {
+            letter-spacing: 0.14em; /* Adds crisp breathing space between U, K, U, and E's */
         }
 
         /* Main Event Content */
@@ -102,13 +128,13 @@
             border-top: 2px solid #d4af37;
             display: flex;
             justify-content: space-around;
-            padding: 12px 0;
+            padding: 15px 0;
             z-index: 999;
         }
         nav.bottom-nav a {
             color: #94a3b8;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             font-weight: 600;
         }
         nav.bottom-nav a.active {
