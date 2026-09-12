@@ -3,191 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christmas Ukulele Singalong!</title>
+    <title>Vibrant Ukuleles - Christmas Singalong</title>
     <style>
-        /* Base Styling & Festive Dark Mode */
+        /* Base Setup & Festive Crimson/Gold Theme */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0f172a; /* Deep midnight blue */
-            color: #f8fafc; /* Crisp off-white for readability */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: #5c0601; /* Deep burgundy - won't clash with bright red logo */
+            color: #fcf8f2;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            text-align: center;
         }
 
-        /* Header & Charity Banner */
-        header {
-            background-color: #1e293b;
-            text-align: center;
-            padding: 20px 15px;
-            border-bottom: 4px solid #dc2626; /* Festive red border */
+        /* SVG Logo Wrapper - Fixes Mobile Alignment and Squishing */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 10px;
+            width: 100%;
+            box-sizing: border-box;
         }
-        h1 {
-            margin: 0;
-            font-size: 1.8rem;
-            color: #ef4444; /* Christmas Red */
-        }
-        .subtitle {
-            margin: 5px 0 15px 0;
-            font-size: 1rem;
-            color: #94a3b8;
-        }
-        .charity-box {
-            background-color: #065f46; /* Festive Green */
-            border: 1px solid #10b981;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            max-width: 500px;
+        .logo-container svg, .logo-container img {
+            max-width: 320px; /* Adjust based on your SVG size */
+            width: 90%;
+            height: auto;
+            display: block;
             margin: 0 auto;
         }
 
-        /* Quick Navigation Bar (Sticky at top when scrolling) */
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: #1e293b;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            overflow-x: auto;
-            border-bottom: 1px solid #334155;
-            z-index: 100;
-        }
-        nav a {
-            background-color: #334155;
-            color: #fff;
-            text-decoration: none;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            white-space: nowrap;
-        }
-        nav a:hover {
-            background-color: #dc2626;
-        }
-
-        /* Lyrics Layout */
+        /* Main Event Content */
         main {
             max-width: 600px;
             margin: 0 auto;
-            padding: 20px 15px 80px 15px; /* Extra bottom padding for comfortable scrolling */
-        }
-        .song-section {
-            margin-bottom: 40px;
-            padding-top: 20px; /* Offset for sticky nav */
-        }
-        h2 {
-            color: #f59e0b; /* Warm Amber for Song Titles */
-            border-bottom: 1px solid #334155;
-            padding-bottom: 5px;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+            padding: 20px 15px 100px 15px; /* Padding at bottom for navigation bar */
         }
         
-        /* The Lyrics: Big and clear for pub reading */
-        .lyrics {
-            font-size: 1.25rem; /* Large font size */
-            white-space: pre-line; /* Preserves line breaks automatically */
-            font-weight: 500;
-            letter-spacing: 0.5px;
+        .festive-greeting {
+            font-size: 1.5rem;
+            color: #d4af37; /* Gold Accent */
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
         }
 
-        /* Chorus highlighting to guide the crowd */
-        .chorus {
-            background-color: #1e293b;
-            border-left: 4px solid #f59e0b;
-            padding: 10px 15px;
-            margin: 15px 0;
-            border-radius: 0 8px 8px 0;
+        .event-box {
+            background-color: rgba(254, 243, 199, 0.1); /* Translucent soft warmth */
+            border: 2px solid #d4af37; /* Metallic Gold Border */
+            border-radius: 12px;
+            padding: 25px 20px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-top: 0;
+            color: #fff;
+        }
+
+        .charity-banner {
+            background-color: #065f46; /* Festive Green */
+            border-left: 5px solid #10b981;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        /* Call To Action Button for Lyrics */
+        .cta-btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #5c0601;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
             font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+            transition: transform 0.2s;
+            margin-top: 15px;
+        }
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Fixed Mobile-First Bottom Navigation Bar */
+        nav.bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1a1a1a;
+            border-top: 2px solid #d4af37;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0;
+            z-index: 999;
+        }
+        nav.bottom-nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        nav.bottom-nav a.active {
+            color: #d4af37; /* Active page gets gold highlight */
+        }
+
+        /* Falling Snow Container */
+        #snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 99;
         }
     </style>
 </head>
 <body>
-<img src="assets/images/vibukelogosvg.svg" alt="Vibrant Ukes!">
-    <header>
-        <h1>🎄 Christmas Ukulele Singalong! 🪕</h1>
-        <div class="subtitle">Live at the Pub</div>
-        <div class="charity-box">
-            📣 <strong>Tonight's Charity:</strong> We are raising money for <strong>[Charity Name]</strong>. Please give generously to our bucket collectors or ask us for a digital donation link!
-        </div>
-    </header>
 
-    <!-- Quick Links so patrons don't have to scroll forever -->
-    <nav>
-        <a href="#song1">1. Rockin' Around</a>
-        <a href="#song2">2. Feliz Navidad</a>
-        <a href="#song3">3. Slade</a>
-    </nav>
+    <div id="snow-container"></div>
+
+    <!-- Centered SVG Logo Section -->
+    <div class="logo-container">
+        <!-- Assuming your logo file is named logo.svg inside an images folder -->
+        <img src="images/logo.svg" alt="Vibrant Ukuleles">
+    </div>
+
+    <div class="festive-greeting">
+        🎄 Wish You A Merry Christmas & A Happy New Year! 🌟
+    </div>
 
     <main>
-        <!-- SONG 1 -->
-        <section id="song1" class="song-section">
-            <h2>1. Rockin' Around the Christmas Tree</h2>
-            <div class="lyrics">
-                Rockin' around the Christmas tree
-                At the Christmas party hop
-                Mistletoe hung where you can see
-                Every couple tries to stop
-
-                Rockin' around the Christmas tree
-                Let the Christmas spirit ring
-                Later we'll have some pumpkin pie
-                And we'll do some caroling
-
-                <div class="chorus">
-                You will get a sentimental feeling when you hear
-                Voices singing, let's be jolly
-                Deck the halls with boughs of holly!
-                </div>
-
-                Rockin' around the Christmas tree
-                Have a happy holiday
-                Everyone dancin' merrily
-                In the new old-fashioned way!
+        <div class="event-box">
+            <h1>Christmas Pub Singalong</h1>
+            <p style="font-size: 1.2rem;">Join us live at the <strong>[Pub Name]</strong> for an evening of festive anthems, drinks, and community cheer!</p>
+            
+            <div class="charity-banner">
+                📣 <strong>In Aid Of Charity:</strong> Tonight we are raising money for <strong>[Charity Name]</strong>. Bucket collections will be running throughout both sets!
             </div>
-        </section>
 
-        <!-- SONG 2 -->
-        <section id="song2" class="song-section">
-            <h2>2. Feliz Navidad</h2>
-            <div class="lyrics">
-                <div class="chorus">
-                Feliz Navidad
-                Feliz Navidad
-                Feliz Navidad
-                Próspero año y felicidad!
-                </div>
-
-                I wanna wish you a Merry Christmas
-                I wanna wish you a Merry Christmas
-                I wanna wish you a Merry Christmas
-                From the bottom of my heart!
-            </div>
-        </section>
-
-        <!-- SONG 3 -->
-        <section id="song3" class="song-section">
-            <h2>3. Merry Xmas Everybody (Slade)</h2>
-            <div class="lyrics">
-                Are you hanging up a stocking on your wall?
-                It's the time that every Santa has a ball
-                Does he ride a fast decline
-                With the top up down the line
-                With four reindeer de-standing?
-                And a permanent design?
-
-                <div class="chorus">
-                So here it is Merry Christmas
-                Everybody's having fun
-                Look to the future now
-                It's only just begun!
-                </div>
-            </div>
-        </section>
+            <a href="lyrics.html" class="cta-btn">📖 View Live Song Lyrics</a>
+        </div>
     </main>
 
+    <!-- Fixed Bottom Menu Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="active">Xmas Home</a>
+        <a href="lyrics.html">Song Lyrics</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Lightweight CSS/JS Snowfall Script -->
+    <script>
+        function createSnowflake() {
+            const snow = document.getElementById('snow-container');
+            const flake = document.createElement('div');
+            flake.innerText = '❄';
+            flake.style.position = 'absolute';
+            flake.style.color = '#fff';
+            flake.style.opacity = Math.random() * 0.7 + 0.3;
+            flake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            flake.style.left = Math.random() * 100 + 'vw';
+            flake.style.top = '-20px';
+            
+            // Animation via standard Web Animations API (smooth on mobile)
+            const duration = Math.random() * 3000 + 4000;
+            flake.animate([
+                { transform: 'translateY(0) rotate(0deg)' },
+                { transform: `translateY(105vh) translateX(${Math.random() * 50 - 25}px) rotate(360deg)` }
+            ], { duration: duration, easing: 'linear' });
+
+            snow.appendChild(flake);
+            setTimeout(() => flake.remove(), duration);
+        }
+        setInterval(createSnowflake, 300);
+    </script>
 </body>
 </html>
