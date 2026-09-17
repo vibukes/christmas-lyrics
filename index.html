@@ -19,14 +19,21 @@
             text-align: center;
         }
 
-           .christmas-garland {
-              width: 100%;             /* Stretches the garland across the top container */
-              max-height: 120px;       /* Forces the height down so it isn't too big */
-              object-fit: contain;     /* Ensures the image doesn't stretch awkwardly */
-              object-position: top;    /* Keeps the garland pinned to the very top edge */
-              display: block;          /* Removes annoying bottom spacing gaps */
-              margin: 0 auto;          /* Centers it horizontally */
-        }
+          .christmas-garland {
+              width: 100%;
+              max-height: 120px;       /* Change this number to tweak the height */
+              object-fit: contain;
+              object-position: top;
+              display: block;
+              margin: 0 auto;
+    }
+
+@media (max-width: 768px) {
+  .christmas-garland {
+    max-height: 80px;      /* Slimmer on phones */
+  }
+}
+
            
         /* 2. UPDATED LOGO CONTAINER - FORCES ABSOLUTE CENTERING */
         .logo-container {
