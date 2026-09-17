@@ -19,6 +19,15 @@
             text-align: center;
         }
 
+           .christmas-garland {
+              width: 100%;             /* Stretches the garland across the top container */
+              max-height: 120px;       /* Forces the height down so it isn't too big */
+              object-fit: contain;     /* Ensures the image doesn't stretch awkwardly */
+              object-position: top;    /* Keeps the garland pinned to the very top edge */
+              display: block;          /* Removes annoying bottom spacing gaps */
+              margin: 0 auto;          /* Centers it horizontally */
+        }
+           
         /* 2. UPDATED LOGO CONTAINER - FORCES ABSOLUTE CENTERING */
         .logo-container {
             display: flex;
@@ -137,7 +146,9 @@
     </style>
 </head>
 <body>
-<img src="assets/images/garland3.png" alt="Vibrant Ukuleles">
+<img src="assets/images/garland3.png" alt="Christmas Garland" class="christmas-garland">
+   
+
     <div id="snow-container"></div>
 
     <!-- Centered Logo Link -->
