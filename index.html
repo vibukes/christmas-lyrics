@@ -6,27 +6,65 @@
     <title>Vibrant Ukuleles - Christmas Singalong</title>
        <style>
         /* Base Setup & Festive Crimson/Gold Theme */
-body {
+html, body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     background-color: #5c0601; /* Deep burgundy - won't clash with bright red logo */
     color: #fcf8f2;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    text-align: center; 
+    
 }
-          
-/* FIX 1: Tighten the spacing around the logo container */
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 50px;       /* Dropped top padding from 1px to 0px */
-    width: 100%;
-    box-sizing: border-box;
-    margin-top: -5px;        /* Pulls the logo up closer to the garland if needed */
-   
-}
+           /* Complete Layout Reset to make Garland touch the top of screen */
+       
+        /* Header Wrapper Setup */
+        .site-header {
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Garland Container - Eliminates padding & forces alignment */
+        .garland-container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            line-height: 0; /* Prevents tiny ghost spacing gaps beneath the image */
+        }
+
+        .garland-img {
+            width: 100%;
+            height: auto;
+            max-height: 120px; /* Caps the vertical thickness so it stays neat on PCs */
+            object-fit: cover; /* Ensures a seamless look if viewed on massive wide screens */
+            display: block;
+        }
+
+        /* Adjusted Logo Box to sit elegantly right under the garland */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 10px 20px 10px; /* Reduced top padding since garland is above it */
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .logo-container a {
+            display: block;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: drop-shadow(0px 0px 8px rgba(224, 242, 254, 0.85));
+        }
+
+
 
 /* FIX 2: Kill the default top margin pushing the greeting text down */
 .festive-greeting {
@@ -35,37 +73,6 @@ body {
     font-weight: bold;
     margin: 5px 0 20px 0;   /* Drastically reduced the top margin from 20px to 5px */
     text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-}
-/* FIX 1: Target ONLY the garland banner, leaving the logo alone */
-.christmas-garland {
-    width: 100%;   
-    height: auto;  
-    display: block;          
-}
-
-/* 2. UPDATED LOGO CONTAINER - FORCES ABSOLUTE CENTERING */
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1px 50px;
-    width: 100%;
-    box-sizing: border-box;
-}
-.logo-container a {
-    display: block;
-    width: 100%;
-    max-width: 320px; /* Adjust this number to make the logo smaller or bigger on screen */
-    margin: 0 auto;
-}
-.logo-container img {
-    /* FIX 2: Restored logo specific responsive layout rules */
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    /* Applies the soft light blue halo right behind your text image */
-    filter: drop-shadow(0px 0px 8px rgba(224, 242, 254, 0.85));
 }
 
 /* Main Event Content */
