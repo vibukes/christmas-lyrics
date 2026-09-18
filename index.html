@@ -15,7 +15,25 @@ body {
     line-height: 1.6;
     text-align: center;
 }
+/* FIX 1: Tighten the spacing around the logo container */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;       /* Dropped top padding from 1px to 0px */
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: -5px;        /* Pulls the logo up closer to the garland if needed */
+}
 
+/* FIX 2: Kill the default top margin pushing the greeting text down */
+.festive-greeting {
+    font-size: 1.5rem;
+    color: #d4af37; 
+    font-weight: bold;
+    margin: 5px 0 20px 0;   /* Drastically reduced the top margin from 20px to 5px */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
 /* FIX 1: Target ONLY the garland banner, leaving the logo alone */
 .christmas-garland {
     width: 100%;   
