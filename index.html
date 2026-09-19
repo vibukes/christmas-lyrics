@@ -11,31 +11,29 @@ html, body {
     background-color: #5c0601; /* Deep burgundy - won't clash with bright red logo */
     color: #fcf8f2;
     margin: 0;
-    padding: 0;
-    
+    padding: 0;  
 }       
-        /* Header Wrapper Setup */
+        /* Header Wrapper */
         .header-container {
           position: relative;       /* Anchor for the absolute logo */
           width: 100%;
           overflow: hidden;         /* Prevents images from spilling off screen */
 }
-/* 2. The background banner image */
+/* Background banner image */
 .banner-bg {
   width: 100%;
   display: block;
   height: auto;             /* Keeps the banner responsive */
 }
-       
-        /* 3. The floating transparent logo */
+        /* Floating transparent logo */
 .floating-logo {
   position: absolute;       /* Pulls it out of document flow to float */
-  top: 60%;                 /* Push down 60% from the top of the banner */
+  top: 65%;                 /* Push down 60% from the top of the banner */
   left: 50%;                /* Push right 50% from the left of the banner */
   transform: translate(-50%, -50%); /* Perfectly offsets its own dimensions to center it */
   
-  width: 80%;               /* Caps size at 80% of the header width */
-  max-width: 600px;         /* Optional: Prevents it from getting absurdly huge on huge PC screens */
+  width: 90%;               /* Caps size at QQ 80% of the header width */
+  max-width: 650px;         /* Optional:  QQ Prevents it from getting absurdly huge on huge PC screens */
   height: auto;             /* Maintains aspect ratio */
 }
 
