@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Ukuleles - Christmas Singalong</title>
+       <style>
+        /* Base Setup & Festive Crimson/Gold Theme */
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #5c0601; /* Deep burgundy - won't clash with bright red logo */
+    color: #fcf8f2;
+    margin: 0;
+    padding: 0;  
+}       
+        /* Header Wrapper */
+        .header-container {
+          position: relative;       /* Anchor for the absolute logo */
+          width: 100%;
+          overflow: hidden;         /* Prevents images from spilling off screen */
+}
+/* Background banner image */
+.banner-bg {
+  width: 100%;
+  display: block;
+  height: auto;             /* Keeps the banner responsive */
+}
+        /* Floating transparent logo */
+.floating-logo {
+  position: absolute;       /* Pulls it out of document flow to float */
+  top: 65%;                 /* Push down 60% from the top of the banner */
+  left: 50%;                /* Push right 50% from the left of the banner */
+  transform: translate(-50%, -50%); /* Perfectly offsets its own dimensions to center it */
+  
+  width: 90%;               /* Caps size at 90% of the header width */
+  max-width: 650px;         /* Optional:  Prevents it from getting absurdly huge on huge PC screens */
+  height: auto;             /* Maintains aspect ratio */
+}
+
+/* Main Event Content */
+main {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 0px 15px 20px 15px; /* Padding at bottom for navigation bar */
+}
+.event-box {
+    background-color: rgba(254, 243, 199, 0.1); /* Translucent soft warmth */
+    border: 2px solid #d4af37; /* Metallic Gold Border */
+    border-radius: 12px;
+    padding: 2px 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-top: 0;
+    color: #fff;
+}
+
+.charity-banner {
+    background-color: #065f46; /* Festive Green */
+    border-left: 5px solid #10b981;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 2px 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* Call To Action Button for Lyrics */
+.cta-btn {
+    display: inline-block;
+    background-color: #d4af37;
+    color: #5c0601;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.2s;
+    margin-top: 15px;
+}
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Fixed Mobile-First Bottom Navigation Bar */
+nav.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    border-top: 2px solid #d4af37;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    z-index: 999;
+}
+nav.bottom-nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+nav.bottom-nav a.active {
+    color: #d4af37; /* Active page gets gold highlight */
+}
+
+</style>
+</head>
+<body>
+    <!-- Centered Logo Link -->
+  /* <div class="header-container">*/
+   <img src="assets/images/garland4.png" alt="Christmas Banner" class="banner-bg">
+   <!-- Your floating transparent logo -->
+   <a href="index.html">    
+  <img src="assets/images/xmaslogopng.png" alt="Vibrant Ukuleles" class="floating-logo">
+ </a>
+  /* </div>*/
+  
+    <main>
+        <div class="event-box">
+            <h1>Christmas Pub Singalong</h1>
+            <p style="font-size: 1.2rem;">Join us live at the <strong>Ye Olde Red Lion</strong> for an evening of festive anthems, drinks, and community cheer!</p>
+            
+            <div class="charity-banner">
+                📣 <strong>In Aid Of Charity:</strong> Tonight we are raising money for <strong>[Charity Name]</strong>. Bucket collections will be running throughout both sets!
+            </div>
+
+            <a href="lyrics.html" class="cta-btn">📖 View Live Song Lyrics</a>
+        </div>
+    </main>
+
+    <!-- Fixed Bottom Menu Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="active">Xmas Home</a>
+        <a href="lyrics.html">Song Lyrics</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+   
+</body>
+</html>
 
