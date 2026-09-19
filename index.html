@@ -17,38 +17,29 @@ html, body {
            /* Complete Layout Reset to make Garland touch the top of screen */
        
         /* Header Wrapper Setup */
-        .site-header {
-            width: 100%;
-            position: relative;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Garland Container - Eliminates padding & forces alignment */
-        .garland-container {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            line-height: 0; /* Prevents tiny ghost spacing gaps beneath the image */
-        }
-
-        .garland-img {
-            width: 100%;
-            height: auto;
-            max-height: 120px; /* Caps the vertical thickness so it stays neat on PCs */
-            object-fit: cover; /* Ensures a seamless look if viewed on massive wide screens */
-            display: block;
-        }
-
-        /* Adjusted Logo Box to sit elegantly right under the garland */
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-             /* padding: 0px 10px 20px 10px; Reduced top padding since garland is above it */
-            width: 100%;
-            box-sizing: border-box;
-        }
+        .header-container {
+          position: relative;       /* Anchor for the absolute logo */
+          width: 100%;
+          overflow: hidden;         /* Prevents images from spilling off screen */
+}
+/* 2. The background banner image */
+.banner-bg {
+  width: 100%;
+  display: block;
+  height: auto;             /* Keeps the banner responsive */
+}
+       
+        /* 3. The floating transparent logo */
+.floating-logo {
+  position: absolute;       /* Pulls it out of document flow to float */
+  top: 50%;                 /* Push down 50% from the top of the banner */
+  left: 50%;                /* Push right 50% from the left of the banner */
+  transform: translate(-50%, -50%); /* Perfectly offsets its own dimensions to center it */
+  
+  width: 80%;               /* Caps size at 80% of the header width */
+  max-width: 600px;         /* Optional: Prevents it from getting absurdly huge on huge PC screens */
+  height: auto;             /* Maintains aspect ratio */
+}
 
         .logo-container a {
             display: block;
@@ -147,19 +138,24 @@ nav.bottom-nav a.active {
     </style>
 </head>
 <body>
-<img src="assets/images/garland4.png" alt="Christmas Garland" class="christmas-garland">
+
     <div id="snow-container"></div>
-<!-- Centered Logo Link -->
-    <div class="logo-container">
+
+    <!-- Centered Logo Link -->
+   <div class="header-container">
+  <!-- Your main Christmas banner -->
+  <img src="assets/images/garland4.png" alt="Christmas Banner" class="banner-bg">
+  
+  <!-- Your floating transparent logo -->
+  <img src="assets/images/xmaslogopng.png" alt="Vibrant Ukuleles" class="floating-logo">
+</div>
+
+     <div class="logo-container">
        <a href="index.html">
         <img src="assets/images/xmaslogopng.png" alt="Vibrant Ukuleles">
        </a>
     </div>
-
-    <div class="festive-greeting">
-        🎄 Wish You A Merry Christmas & A Happy New Year! 🌟
-    </div>
-
+   
     <main>
         <div class="event-box">
             <h1>Christmas Pub Singalong</h1>
