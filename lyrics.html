@@ -13,30 +13,7 @@ html, body {
     margin: 0;
     padding: 0;  
 }       
-        /* Header Wrapper */
-        .header-container {
-          position: relative;       /* Anchor for the absolute logo */
-          width: 100%;
-          overflow: hidden;         /* Prevents images from spilling off screen */
-}
-/* Background banner image */
-.banner-bg {
-  width: 100%;
-  display: block;
-  height: auto;             /* Keeps the banner responsive */
-}
-        /* Floating transparent logo */
-.floating-logo {
-  position: absolute;       /* Pulls it out of document flow to float */
-  top: 65%;                 /* Push down 60% from the top of the banner */
-  left: 50%;                /* Push right 50% from the left of the banner */
-  transform: translate(-50%, -50%); /* Perfectly offsets its own dimensions to center it */
-  
-  width: 90%;               /* Caps size at 90% of the header width */
-  max-width: 650px;         /* Optional:  Prevents it from getting absurdly huge on huge PC screens */
-  height: auto;             /* Maintains aspect ratio */
-}
-
+     
 /* Main Event Content */
 main {
     max-width: 600px; 
@@ -114,7 +91,8 @@ nav.bottom-nav a.active {
 <body>
     <!-- Centered Logo Link -->
   <!-- <div class="header-container">*/ -->
-   <img src="assets/images/garland4.png" alt="Christmas Banner" class="banner-bg">
+   <img src="assets/images/garland4.png" alt="Christmas Banner">
+    <br>
    <!-- Your floating transparent logo -->
    <a href="index.html">    
   <img src="assets/images/xmaslogopng.png" alt="Vibrant Ukuleles" class="floating-logo">
@@ -133,7 +111,7 @@ nav.bottom-nav a.active {
             <a href="lyrics.html" class="cta-btn">📖 View Live Song Lyrics</a>
         </div>
     </main>
-
+<br>
     <!-- Fixed Bottom Menu Bar -->
     <nav class="bottom-nav">
         <a href="index.html" class="active">Xmas Home</a>
