@@ -12,7 +12,7 @@
 .garland-banner {
   display: block;
   width: 100%;          /* Fills the full width on mobile phone screens */
-  max-width: 1200px;    /* 🛑 STOPS it from stretching to 2400px on large PC screens */
+  max-width: 1200px;    /* STOPS it from stretching to 2400px on large PC screens */
   height: auto;         /* Maintains proper image proportions */
 }
 
