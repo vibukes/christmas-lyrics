@@ -36,4 +36,28 @@
        upward because the garland image is physically taller */
     margin-top: -100px; 
   }
+/* Fixed Mobile-First Bottom Navigation Bar */
+nav.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    border-top: 2px solid #d4af37;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    z-index: 999;
+}
+nav.bottom-nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+nav.bottom-nav a.active {
+    color: #d4af37; /* Active page gets gold highlight */
+}
+
+
 }
