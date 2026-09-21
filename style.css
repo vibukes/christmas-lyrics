@@ -1,0 +1,39 @@
+/* 1. Set your Christmas red background */
+.festive-body {
+  background-color: #b30000; /* Adjust to your exact shade of red */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Keeps both images perfectly centered */
+}
+
+/* 2. Style the Garland */
+.garland-banner {
+  display: block;
+  width: 100%;          /* Fills the full width on mobile phone screens */
+  max-width: 1200px;    /* 🛑 STOPS it from stretching to 2400px on large PC screens */
+  height: auto;         /* Maintains proper image proportions */
+}
+
+/* 3. Style the Logo & make it float/overlap */
+.floating-logo {
+  display: block;
+  position: relative;   /* Allows layering */
+  z-index: 10;          /* Ensures the logo sits ON TOP of the garland */
+  
+  width: 80%;           /* Scales nicely on mobile */
+  max-width: 450px;     /* Prevents it from getting massive on PC */
+  
+  /* 🪄 THE OVERLAP TRICK */
+  margin-top: -60px;    /* Pulls the logo UP over the bottom of the garland */
+}
+
+/* 4. Fine-tuning for PC vs Mobile */
+@media (min-width: 768px) {
+  .floating-logo {
+    /* On larger PC screens, you might need a stronger pull 
+       upward because the garland image is physically taller */
+    margin-top: -100px; 
+  }
+}
