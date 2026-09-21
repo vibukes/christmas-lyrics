@@ -13,7 +13,18 @@ html, body {
     margin: 0;
     padding: 0;  
 }       
-     
+   .row {
+       display: flex;
+       flex-wrap: wrap; /* forces columns to stack on mobiles instead ofbreaking */
+       gap: 20px; /* keeps spacing identical on all screens */
+       justify-content: center;
+   }
+
+   .card { 
+       flex: 1 1 300px; /* grows/shrinks, but won't go smaller than 300px wide */
+       background-colo: #f4f4f4;
+       padding: 20px;
+   }
 /* Main Event Content */
 main {
     max-width: 600px; 
